@@ -1,0 +1,212 @@
+.keys span {
+  display: inline-block;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 36px;
+  font-size: 20px;
+  border-radius: 7px;
+
+}
+
+
+.buttom input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.buttom input {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.buttom {
+  position: relative;
+  display: block;
+}
+
+
+
+/* Estas reglas se aplicarán a todos los i despues de un input de tipo radio*/
+.buttom input[type=radio]+i {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  align-self: center;
+  cursor: pointer;
+}
+/* Estas reglas se aplicarán a todos las elementos i después de cualquier input*/
+.buttom input[type=radio] + i:before{
+	content: '';
+	display: block;
+	height: 12px;
+	width: 12px;
+	background: #f96c5b;
+	border-radius: 100%;
+	z-index: 1;
+	transition: all 0.25s ease; /* Todas las propiedades | tiempo | tipo movimiento */
+	transform: scale(0) /* Lo reducimos a 0*/ ;
+	opacity: 0; /* Lo ocultamos*/
+}
+
+.buttom input[type=radio]:checked + i:before{
+	transform: scale(1);
+	opacity: 1;
+}
+/*---------------------------Dark Theme--------------------------*/
+.gray {
+  background-color: #3b4664;
+  color: white;
+}
+
+.gray .buttom {
+  background-color: #181f32;
+}
+
+.gray .buttom input+i {
+  background: #181f32;
+}
+
+.gray .buttom input[type=radio] + i:before{
+	background: #f96c5b;
+}
+
+.gray .display,
+.gray .display input {
+  background-color: #181f32;
+}
+
+.gray .keys {
+  background-color: #252d42;
+}
+
+.gray .keys span {
+  background-color: white;
+  color: #3f4656;
+  box-shadow: 0px 4px 0px #beb2a7;
+}
+
+.gray .keys span:hover {
+  background-color: rgb(194, 194, 194);
+  box-shadow: 0px 4px 0px #998d81;
+}
+
+.gray #delete,
+.gray #reset {
+  background-color: #a2b3e1;
+  color: white;
+  box-shadow: 0px 4px 0px #6a7694;
+}
+
+.gray #equal {
+  background-color: #f96c5b;
+  color: white;
+  box-shadow: 0 4px 0 #ac4a3f;
+}
+
+/*---------------------------------light Theme--------------------------*/
+.light {
+  background-color: #e6e6e6;
+  color: #34342c;
+}
+
+.light .buttom {
+  background-color: #d3cdcd;
+}
+
+
+.light .buttom input+i {
+  background: #d3cdcd;
+}
+
+.light .buttom input[type=radio] + i:before{
+	background: #ff8b32;
+}
+
+.light .display,
+.light .display input {
+  background-color: #eeeeee;
+}
+
+.light .keys {
+  background-color: #d3cdcd;
+}
+
+.light .keys span {
+  background-color: white;
+  color: #3f4656;
+  box-shadow: 0px 4px 0px #beb2a7;
+}
+
+.light .keys span:hover {
+  background-color: rgb(194, 194, 194);
+  box-shadow: 0px 4px 0px #998d81;
+}
+
+.light #delete,
+.light #reset {
+  background-color: #62b5bd;
+  color: white;
+  box-shadow: 0px 4px 0px #3a6b70;
+}
+
+.light #equal {
+  background-color: #ff8b38;
+  color: white;
+  box-shadow: 0 4px 0 #b26127;
+}
+
+/*---------------------------------purple Theme--------------------------*/
+
+.purple {
+  background-color: #17062a;
+  color: #fde438;
+}
+
+.purple .buttom {
+  background-color: #1e0837;
+}
+
+
+.purple .buttom input+i {
+  background: #1e0837;
+}
+
+.purple .buttom input[type=radio] + i:before{
+	background: #96fefa;
+}
+
+.purple .display,
+.purple .display input {
+  background-color: #1e0836;
+}
+
+.purple .keys {
+  background-color: #1e0836;
+}
+
+.purple .keys span {
+  background-color: #331b4d;
+  color: #fde438;
+  box-shadow: 0px 4px 0px #881b9e;
+}
+
+.purple .keys span:hover {
+  background-color: #6b34ac;
+  box-shadow: 0px 4px 0px #881b9e;
+}
+
+.purple #delete,
+.purple #reset {
+  background-color: #8a32b2;
+  color: #fde438;
+  box-shadow: 0px 4px 0px #c547fe;
+}
+
+.purple #equal {
+  background-color: #94fff9;
+  color: black;
+  box-shadow: 0 4px 0 #76ccc7;
+}
